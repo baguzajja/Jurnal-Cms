@@ -1,0 +1,48 @@
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+		  <?php
+			if($_GET[modul]=="jurnal"){
+		  ?>
+            <li><a href="">FIP UNP</a></li>
+            <li><a href="">EJOURNAL</a></li>
+            <li class="active">JURNAL</li>
+		   <?php
+		   }else{
+			?>
+			<li><a href="">FIP UNP</a></li>
+            <li><a href="">EJOURNAL</a></li>
+            <li class="active">DASHBOARD</li>
+	 	   <?php
+		   //=====================================================================
+		    if($_GET[modul]=="home"){
+				include"home.php";
+			}
+			if($_GET[modul]=="penelitiandosen"){
+				echo"<h1>Penelitian Dosen</h1>";
+				include"dosen.php";
+			}
+			if($_GET[modul]=="search"){
+				echo"<h1>Hasil Pencarian</h1>";
+				include"search.php";
+			}
+			if($_GET[modul]=="penelitianmahasiswa"){
+				echo"<h1>Penelitian Mahasiswa</h1>";
+				include"mahasiswa.php";
+			}
+			if($_GET[modul]=="journal"){
+				echo"<h1>Jurnal FIP UNP</h1>";
+				include"journal.php";
+			}
+			if($_GET[modul]=="contact"){
+				echo"<h1>Contact FIP UNP</h1>";
+				include"contact.php";
+			}
+			//=====================================================================
+		   }
+		   ?>
+          </ol>
+              
+        </div>
+      </div>
+     
